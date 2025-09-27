@@ -38,7 +38,7 @@ uploaded_file = st.file_uploader("Upload gambar daun herbal", type=["jpg", "jpeg
 if uploaded_file is not None and model is not None:
     # Buka gambar
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Gambar yang diupload", use_column_width=True)
+    st.image(image, caption="Gambar yang diupload", use_container_width=True)
 
     # --- Preprocessing ---
     target_size = (150, 150)  # Sesuaikan dengan ukuran input model
@@ -63,5 +63,6 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
 
