@@ -29,6 +29,16 @@ st.title("🌿 Herbal Leaf Classification")
 st.write("""
 Aplikasi Pengolahan Citra Digital Oleh Kelompok 1
 """)
+
+# --- Informasi Anggota Kelompok ---
+st.markdown("""
+**Anggota Kelompok 1:**
+1. Rafil Moehamad Alif - 211351116  
+2. Chandra Alnando - 241352003  
+3. Nida Dhiya U - 221351147  
+4. Syerly Novebriana L - 221351108  
+""")
+
 st.write("""
 Upload gambar daun herbal, dan model deep learning akan memprediksi jenis daun tersebut.
 """)
@@ -73,4 +83,5 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
