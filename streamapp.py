@@ -5,28 +5,20 @@ from PIL import Image
 import requests
 import tempfile
 import os
+import gdown
 
-# --- Fungsi untuk download model dari Google Drive ---
 @st.cache_resource
 def download_and_load_model():
-    # Google Drive file ID
     file_id = "1h7Tfhs6CKN6i4RJ-GdTQr1B4eiArMVCY"
-    download_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    download_url = f"https://drive.google.com/uc?id={file_id}"
 
-    st.info("🔄 Mengunduh model dari Google Drive...")
-
-    response = requests.get(download_url)
-    if response.status_code != 200:
-        st.error("Gagal mengunduh model dari Google Drive.")
-        return None
-
-    # Simpan sementara
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".h5") as tmp:
-        tmp.write(response.content)
-        tmp_path = tmp.name
+    st.info("🔄 Mengunduh model dari Google Drive menggunakan gdown...")
+    tmp_path = os.path.join(tempfile.gettempdir(), "Augmentasi_Model.h5")
+    gdown.download(download_url, tmp_path, quiet=False)
 
     st.success("✅ Model berhasil diunduh!")
-
+    model = tf.keras.models.load_model(tmp_path)
+    return model
     # Load model TensorFlow
     model = tf.keras.models.load_model(tmp_path)
     return model
@@ -71,3 +63,4 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
