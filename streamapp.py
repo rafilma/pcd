@@ -53,7 +53,7 @@ if uploaded_file is not None and model is not None:
     # --- Mapping Index ke Label ---
     class_labels = [
         "Belimbing Wuluh", "Jambu Biji", "Jeruk", "Kemangi", "Lidah Buaya",
-        "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih, "Gambar Tidak Terdeteksi Tanaman Herbal"
+        "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih"
     ]
     predicted_label = class_labels[predicted_class]
 
