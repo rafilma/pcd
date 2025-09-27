@@ -43,6 +43,26 @@ st.write("""
 Upload gambar daun herbal, dan model deep learning akan memprediksi jenis daun tersebut.
 """)
 
+# --- Mapping Index ke Label ---
+class_labels = [
+    "Belimbing Wuluh", "Jambu Biji", "Jeruk", "Kemangi", "Lidah Buaya",
+    "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih"
+]
+
+# --- Manfaat Tanaman Herbal ---
+herbal_benefits = {
+    "Belimbing Wuluh": "Mengurangi batuk, sariawan, dan membantu menurunkan tekanan darah.",
+    "Jambu Biji": "Meningkatkan daya tahan tubuh, mempercepat penyembuhan luka, dan baik untuk pencernaan.",
+    "Jeruk": "Sumber vitamin C yang tinggi, meningkatkan imun tubuh, dan mencegah sariawan.",
+    "Kemangi": "Mengurangi bau mulut, melancarkan pencernaan, dan sebagai antioksidan alami.",
+    "Lidah Buaya": "Menyembuhkan luka bakar, melembabkan kulit, dan meningkatkan kesehatan rambut.",
+    "Nangka": "Sumber energi, kaya akan vitamin A dan C, serta meningkatkan kekebalan tubuh.",
+    "Pandan": "Membantu mengurangi stres, mengatasi nyeri sendi, dan meningkatkan nafsu makan.",
+    "Pepaya": "Melancarkan pencernaan, menjaga kesehatan kulit, dan kaya antioksidan.",
+    "Seledri": "Menurunkan tekanan darah, menjaga kesehatan ginjal, dan sebagai anti-inflamasi.",
+    "Sirih": "Mengatasi bau mulut, mempercepat penyembuhan luka, dan sebagai antiseptik alami."
+}
+
 # --- Upload Gambar ---
 uploaded_file = st.file_uploader("Upload gambar daun herbal", type=["jpg", "jpeg", "png"])
 
@@ -62,12 +82,6 @@ if uploaded_file is not None and model is not None:
     predicted_class = np.argmax(prediction, axis=1)[0]
     confidence = np.max(prediction)  # Nilai confidence tertinggi
 
-    # --- Mapping Index ke Label ---
-    class_labels = [
-        "Belimbing Wuluh", "Jambu Biji", "Jeruk", "Kemangi", "Lidah Buaya",
-        "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih"
-    ]
-
     st.subheader("Hasil Prediksi")
 
     # Jika confidence < 70%, dianggap bukan tanaman herbal
@@ -77,11 +91,11 @@ if uploaded_file is not None and model is not None:
         st.write(f"Confidence terlalu rendah: **{confidence * 100:.2f}%**")
     else:
         predicted_label = class_labels[predicted_class]
+        manfaat = herbal_benefits.get(predicted_label, "Manfaat belum tersedia.")
+        
         st.write(f"🌱 **Jenis daun terdeteksi:** {predicted_label}")
-        st.write(f"{predicted_label} Adalah Tanaman Herbal")
+        st.write(f"{predicted_label} adalah tanaman herbal yang bermanfaat untuk: **{manfaat}**")
         st.write(f"Confidence: **{confidence * 100:.2f}%**")
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
-
-
