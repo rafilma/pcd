@@ -52,8 +52,8 @@ if uploaded_file is not None and model is not None:
 
     # --- Mapping Index ke Label ---
     class_labels = [
-        "Sirih", "Seledri", "Pepaya", "Pandan", "Nangka",
-        "Lidah Buaya", "Kemangi", "Jeruk Nipis", "Jambu Biji", "Belimbing Wuluh"
+        "Belimbing Wuluh", "Jambu Biji", "Jeruk", "Kemangi", "Lidah Buaya",
+        "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih, "Gambar Tidak Terdeteksi Tanaman Herbal"
     ]
     predicted_label = class_labels[predicted_class]
 
@@ -63,4 +63,5 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
