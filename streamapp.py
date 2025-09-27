@@ -29,6 +29,9 @@ model = download_and_load_model()
 # --- Judul Aplikasi ---
 st.title("🌿 Herbal Leaf Classification")
 st.write("""
+Aplikasi Pengolahan Citra Digital Oleh Kelompok 1
+""")
+st.write("""
 Upload gambar daun herbal, dan model deep learning akan memprediksi jenis daun tersebut.
 """)
 
@@ -63,6 +66,7 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
 
 
