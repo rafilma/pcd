@@ -68,7 +68,9 @@ if uploaded_file is not None and model is not None:
     else:
         predicted_label = class_labels[predicted_class]
         st.write(f"🌱 **Jenis daun terdeteksi:** {predicted_label}")
+        st.write(f"{predicted_label} Adalah Tanaman Herbal")
         st.write(f"Confidence: **{confidence * 100:.2f}%**")
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
