@@ -21,4 +21,7 @@ Setiap gambar memiliki latar belakang putih, dengan format .jpg dan dimensi 1600
 
 
 ## Deployment
+Deployment pada aplikasi ini di upload dalam Streamlit karena arsitektur VGG16 atau transfer learning tidak cocok untuk penggunaan model secara realtime. Saya sarankan jika ingin di rubah dalam mobile maka gunakan Arsitektur MobileNet. 
+Untuk aplikasi bisa di klik di link dibawah ini
+<br>
 [Herbal Leaf Prediction](https://herbal-leaf.streamlit.app/)
