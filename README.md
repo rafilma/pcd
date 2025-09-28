@@ -9,8 +9,12 @@ Seiring dengan berkembangnya teknologi kecerdasan buatan (Artificial Intelligenc
 <br>
 
 ## Dataset
-Dataset yang di gunakan dalam model pembelajaran deep learning ini di dasari dari dataset berikut
-[Indonesian Herb Leaf Dataset 3500](https://data.mendeley.com/datasets/s82j8dh4rr/1)
+Dataset yang di gunakan dalam model pembelajaran deep learning ini di dasari dari dataset yang dapat di akses pada link berikut
+[Indonesian Herb Leaf Dataset 3500](https://data.mendeley.com/datasets/s82j8dh4rr/1)<br>
+Terdapat sepuluh spesies tanaman yang terdapat dalam dataset ini, yaitu Averrhoa bilimbi (Blimbing Wuluh), Psidium guajava (Jambu Biji), Citrus Aurantiifolia (Jeruk Nipis), Ocimum Africanum (Kemangi), Aloe vera (Lidah Buaya), Artocarpus heterophyllus (Nangka), Pandanus Amaryllifolius (Pandan), Carica papaya (Pepaya), Apium graveolens (Seledri), dan Piper Betle (Sirih).
+Total dataset terdiri dari 3500 gambar, di mana setiap spesies memiliki 350 gambar beresolusi tinggi. Folder diberi nama sesuai dengan nama dalam bahasa Indonesia.
+Setiap gambar memiliki latar belakang putih, dengan format .jpg dan dimensi 1600 x 1200 piksel.
+
 
 ## Deployment
 [Herbal Leaf Prediction](https://herbal-leaf.streamlit.app/)
