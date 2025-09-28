@@ -9,7 +9,7 @@ Seiring dengan berkembangnya teknologi kecerdasan buatan (Artificial Intelligenc
 <br>
 
 ## Dataset
-
+Dataset yang di gunakan dalam model pembelajaran deep learning ini di dasari dari dataset berikut
 [Dataset](https://data.mendeley.com/datasets/s82j8dh4rr/1)
 
 ## Deployment
