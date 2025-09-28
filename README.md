@@ -8,6 +8,10 @@ Namun, dalam praktiknya, masyarakat sering mengalami kesulitan dalam mengenali d
 Seiring dengan berkembangnya teknologi kecerdasan buatan (Artificial Intelligence/AI), khususnya dalam bidang pengolahan citra digital (image processing), muncul peluang untuk membuat aplikasi yang dapat membantu proses identifikasi tanaman herbal secara otomatis, cepat, dan akurat. Dengan memanfaatkan deep learning, khususnya Convolutional Neural Network (CNN), sistem dapat dilatih menggunakan dataset gambar daun herbal untuk mengenali pola dan ciri khas dari setiap jenis tanaman.
 <br>
 
+## Arsitektur
+<br>
+Model pembelejaran ini menggunakan Arsitektur VGG16. Yaitu metode transfer learning yang selanjutnya akan ditambah dengan arsitektur layer baru pada bagian Fully Connected Layer yaitu output layer untuk menyesuaikan dengan jumlah kelas dataset yang diklasifikasikan.
+
 ## Dataset
 Dataset yang di gunakan dalam model pembelajaran deep learning ini di dasari dari dataset yang dapat di akses pada link berikut
 [Indonesian Herb Leaf Dataset 3500](https://data.mendeley.com/datasets/s82j8dh4rr/1)<br>
