@@ -95,10 +95,10 @@ if uploaded_file is not None and model is not None:
         
         st.write(f"🌱 **Jenis daun terdeteksi:** {predicted_label}")
         st.write(f"{predicted_label} adalah tanaman herbal yang bermanfaat untuk: **{manfaat}**")
-        st.write(f"Confidence: **{confidence * 100:.2f}%**")
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
 
 
