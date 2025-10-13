@@ -45,8 +45,8 @@ Upload gambar daun herbal, dan model deep learning akan memprediksi jenis daun t
 
 # --- Mapping Index ke Label ---
 class_labels = [
-    "Belimbing Wuluh", "Jambu Biji", "Jeruk", "Kemangi", "Lidah Buaya",
-    "Nangka", "Pandan", "Pepaya", "Seledri", "Sirih"
+    "Daun Belimbing Wuluh", "Jambu Biji", "Daun Jeruk", "Kemangi", "Lidah Buaya",
+    "Daun Nangka", "Pandan", "Daun Pepaya", "Seledri", "Sirih"
 ]
 
 # --- Manfaat Tanaman Herbal ---
@@ -99,4 +99,5 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
