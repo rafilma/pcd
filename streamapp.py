@@ -51,14 +51,14 @@ class_labels = [
 
 # --- Manfaat Tanaman Herbal ---
 herbal_benefits = {
-    "Belimbing Wuluh": "Mengurangi batuk, sariawan, dan membantu menurunkan tekanan darah.",
+    "Daun Belimbing Wuluh": "Menurunkan tekanan darah tinggi dan kadar gula darah, mengatasi peradangan, menjaga kesehatan kulit dan mata, serta bersifat antibakteri untuk membantu menyembuhkan infeksi ringan seperti jerawat dan sakit gigi.",
     "Jambu Biji": "Meningkatkan daya tahan tubuh, mempercepat penyembuhan luka, dan baik untuk pencernaan.",
-    "Jeruk": "Sumber vitamin C yang tinggi, meningkatkan imun tubuh, dan mencegah sariawan.",
+    "Daun Jeruk": "Meningkatkan sistem imun, meredakan stres, mendukung kesehatan pencernaan, memiliki sifat anti-inflamasi, menyegarkan napas, serta menjaga kesehatan kulit dan rambut. ",
     "Kemangi": "Mengurangi bau mulut, melancarkan pencernaan, dan sebagai antioksidan alami.",
     "Lidah Buaya": "Menyembuhkan luka bakar, melembabkan kulit, dan meningkatkan kesehatan rambut.",
-    "Nangka": "Sumber energi, kaya akan vitamin A dan C, serta meningkatkan kekebalan tubuh.",
+    "Daun Nangka": "Mempercepat penyembuhan luka, mengelola kadar gula darah, meredakan peradangan, dan mengatasi masalah kulit seperti jerawat karena kandungan antioksidan, antibakteri, dan antiradangnya.",
     "Pandan": "Membantu mengurangi stres, mengatasi nyeri sendi, dan meningkatkan nafsu makan.",
-    "Pepaya": "Melancarkan pencernaan, menjaga kesehatan kulit, dan kaya antioksidan.",
+    "Daun Pepaya": "Mengobati demam berdarah, meningkatkan kekebalan tubuh, membantu melancarkan pencernaan, dan mengurangi nyeri haid.",
     "Seledri": "Menurunkan tekanan darah, menjaga kesehatan ginjal, dan sebagai anti-inflamasi.",
     "Sirih": "Mengatasi bau mulut, mempercepat penyembuhan luka, dan sebagai antiseptik alami."
 }
@@ -99,3 +99,4 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
