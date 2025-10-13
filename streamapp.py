@@ -10,7 +10,7 @@ import gdown
 # --- Fungsi untuk download dan load model ---
 @st.cache_resource
 def download_and_load_model():
-    file_id = "1h7Tfhs6CKN6i4RJ-GdTQr1B4eiArMVCY"
+    file_id = "1rZsWtsWbPidckehjjMeQuwHKxi_E8bgQ"
     download_url = f"https://drive.google.com/uc?id={file_id}"
 
     st.info("🔄 Mengunduh model dari Google Drive menggunakan gdown...")
@@ -99,5 +99,6 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
 
