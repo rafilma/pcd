@@ -88,7 +88,7 @@ if uploaded_file is not None and model is not None:
     threshold = 0.90
     if confidence < threshold:
         st.error("❌ Gambar ini **bukan tanaman herbal** atau tidak dikenali oleh model.")
-        st.write(f"Confidence terlalu rendah: **{confidence * 100:.2f}%**")
+        st.write(f"Confidence terlalu rendah")
     else:
         predicted_label = class_labels[predicted_class]
         manfaat = herbal_benefits.get(predicted_label, "Manfaat belum tersedia.")
@@ -98,6 +98,7 @@ if uploaded_file is not None and model is not None:
 
 elif uploaded_file is None:
     st.info("Silakan upload gambar daun herbal untuk memulai prediksi.")
+
 
 
 
